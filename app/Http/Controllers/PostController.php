@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-	public function __construct()
+    public function __construct()
     {
         return $this->middleware('auth');
     }
@@ -13,7 +13,7 @@ class PostController extends Controller
     {
     	return view('post');
     }
-	public function store(Request $request)
+    public function store(Request $request)
     {
         $post =  new Post;
         $post->title = $request->get('title');
@@ -21,7 +21,8 @@ class PostController extends Controller
 	$post->save();
         return redirect('posts');
     }
-    public function index(){
+    public function index()
+    {
 	$posts = Post::all();
 	return view('index', compact('posts'));
     }
