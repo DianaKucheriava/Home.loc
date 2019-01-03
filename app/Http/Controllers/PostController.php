@@ -18,16 +18,16 @@ class PostController extends Controller
         $post =  new Post;
         $post->title = $request->get('title');
         $post->body = $request->get('body');
-	    $post->save();
+	$post->save();
         return redirect('posts');
     }
     public function index(){
-	    $posts = Post::all();
-	    return view('index', compact('posts'));
+	$posts = Post::all();
+	return view('index', compact('posts'));
     }
     public function show($id)
-	{
-	    $post = Post::find($id);
-	    return view('show', compact('post'));
-	}
+    {
+	$post = Post::find($id);
+	return view('show', compact('post'));
+    }
 }
