@@ -25,6 +25,7 @@ Route::get('register',array('as'=>'register','uses'=>'Auth\RegisterController@sh
 Route::get('register/ajax/{id_country}',array('as'=>'register.ajax','uses'=>'Auth\RegisterController@regionAjax'))->name('register') ;
 Route::get('register/{id_region}',array('as'=>'register.ajax','uses'=>'Auth\RegisterController@cityAjax')) ;
 Route::post('register', 'Auth\RegisterController@register')->name('post.register');
+Route::post('register/{email}', array('uses' => 'EmailAvaliable@check'));
 //////////////////////////Password Reset/////////////////////////////////////////////////
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
