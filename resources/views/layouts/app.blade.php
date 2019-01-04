@@ -46,11 +46,7 @@
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a class="nav-link" href="{{ route('home') }}">Додому</a></li>
                                     <li><a class="fa fa-btn fa-user" href="{{ route('settings') }}">Налаштування</a></li>
-                                    <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Вихід</a>
-                                        <form id="logout-form" action="{{ route('post.register') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
+                                    <li><a class="nav-link" href="{{ route('logout') }}">Вихід</a></li>
                                 </ul>
                             </li>
                         @endif
