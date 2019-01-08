@@ -19,7 +19,7 @@ Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');
 /////////////////////////////Login////////////////////////////////////////////////////
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 ////////////////////////////Register////////////////////////////////////////////////////
 Route::get('register',array('as'=>'register','uses'=>'Auth\RegisterController@showRegistrationForm'));
 Route::get('register/ajax/{id_country}',array('as'=>'register.ajax','uses'=>'Auth\RegisterController@regionAjax'))->name('register') ;
@@ -31,4 +31,3 @@ Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm'
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
-?>
