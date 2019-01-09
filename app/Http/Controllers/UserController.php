@@ -34,14 +34,15 @@ class UserController extends Controller
 			'password.min' => 'Password needs to have at least 6 characters',
 			'password_confirmation.required' => 'Passwords do not match'
 		]);
-		$current_password = \Auth::user()->password;           //взяли старый пароль
-		if(\Hash::check($request->input('oldpass'), $current_password))  //сровнили ввод старый и счит старый и если совпали
+		$current_password = \Auth::user()->password;         
+		if(\Hash::check($request->input('oldpass'), $current_password))
 		{
 			$user_id = \Auth::user()->id;
 			$obj_user = user::find($user_id);						
-			$obj_user->password = \Hash::make($request->input('password'));	//выбрали поле пароль и считали новый пароль
-			$obj_user->save(); 												//сохранили
-			return redirect()->route('settings');
+			$obj_user->password = \Hash::make($request->input('password'));
+			$obj_user->save(); 			
+			$data['errorMessage'] = 'Пароль змінено';	
+			return redirect()->route('settings', $data);
 		} else {
 			$data['errorMessage'] = 'Please enter correct current password';
 			return redirect()->route('settings', $data);
@@ -65,9 +66,10 @@ class UserController extends Controller
 			$userMeta = user::find($id);
 			$userMeta->email = $request->input('email');
 			$userMeta->save(); 
-			return redirect()->route('settings'); 
+			$data['error_Message']='Enail змінено!';
+			return redirect()->route('settings', $data); 
 		} else {
-			$data['errorMessage'] = 'Будь-ласка введіть правельну поточну пошту!';
+			$data['error_Message'] = 'Будь-ласка введіть правельну поточну пошту!';
 			return redirect()->route('settings', $data);
 		}
 	}
