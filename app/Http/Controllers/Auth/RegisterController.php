@@ -76,7 +76,8 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
             'id_country' => $data['id_country'],
             'id_region' => $data['id_region'],
-            'id_city' => $data['id_city']
+            'id_city' => $data['id_city'],
+            'avatar'=> 'default.jpg'
         ]);
     }
 }
