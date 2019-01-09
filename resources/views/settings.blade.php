@@ -46,8 +46,8 @@
                        <p style='padding:15px;' class='bg-danger'>{{ $error }}</p>
                     @endforeach
                     @endif
-                    @if(Request::get('errorMessage') !== null)
-                        <p style='padding:15px;' class='bg-danger'>{{ Request::get('errorMessage') }}</p>
+                    @if(Request::get('error_Message') !== null)
+                        <p style='padding:15px;' class='bg-danger'>{{ Request::get('error_Message') }}</p>
                     @endif
                 <form method="post" action="{{ route('settings.update_email')}}">
                     {{ csrf_field() }}
