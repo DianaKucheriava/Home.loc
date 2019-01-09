@@ -14,7 +14,9 @@ class UserController extends Controller
 	public function update_avatar(Request $request){
 		if ($request->hasFile('avatar')) {
 			$avatar=$request->file('avatar');
-			$filename = time(). '.' .$avatar->getClientOriginalExtension();
+			$user_name=Auth::user()->name;
+			$filename = $user_name. '.' .$avatar->getClientOriginalExtension();
+			//$filename = time(). '.' .$avatar->getClientOriginalExtension();
 			$avatar=Image::make($avatar)->resize(300,300)->save(public_path('/uploads/avatars/'.$filename));
 			$user=Auth::user();
 			$user->avatar=$filename;
