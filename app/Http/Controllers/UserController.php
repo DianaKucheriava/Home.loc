@@ -16,7 +16,6 @@ class UserController extends Controller
 			$avatar=$request->file('avatar');
 			$user_name=Auth::user()->name;
 			$filename = $user_name. '.' .$avatar->getClientOriginalExtension();
-			//$filename = time(). '.' .$avatar->getClientOriginalExtension();
 			$avatar=Image::make($avatar)->resize(300,300)->save(public_path('/uploads/avatars/'.$filename));
 			$user=Auth::user();
 			$user->avatar=$filename;
@@ -30,23 +29,23 @@ class UserController extends Controller
 			'password' => 'required|string|min:6',
 			'password_confirmation' => 'required|same:password',
 		],[
-			'oldpass.required' => 'Old password is required',
-			'oldpass.min' => 'Old password needs to have at least 6 characters',
-			'password.required' => 'Password is required',
-			'password.min' => 'Password needs to have at least 6 characters',
-			'password_confirmation.required' => 'Passwords do not match'
+			'oldpass.required' => 'Необхілно ввести старий пароль',
+			'oldpass.min' => 'Старий пароль повинен складатись починаючи з 6 символів',
+			'password.required' => 'Пароль потрібний',
+			'password.min' => 'Пароль повинен мітити хоча б 6 символів',
+			'password_confirmation.required' => 'Паролі не збігаються'
 		]);
-		$current_password = \Auth::user()->password;         
-		if(\Hash::check($request->input('oldpass'), $current_password))
+		$current_password = \Auth::user()->password;           
+		if(\Hash::check($request->input('oldpass'), $current_password)) 
 		{
 			$user_id = \Auth::user()->id;
 			$obj_user = user::find($user_id);						
-			$obj_user->password = \Hash::make($request->input('password'));
+			$obj_user->password = \Hash::make($request->input('password'));	
 			$obj_user->save(); 			
-			$data['errorMessage'] = 'Пароль змінено';	
+			$data['errorMessage'] = 'Пароль змінено';							
 			return redirect()->route('settings', $data);
 		} else {
-			$data['errorMessage'] = 'Please enter correct current password';
+			$data['errorMessage'] = 'Введіть правильный поточний пароль!';
 			return redirect()->route('settings', $data);
 		}
 	}
