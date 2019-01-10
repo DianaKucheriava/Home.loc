@@ -163,7 +163,7 @@ INSERT INTO `posts` VALUES (1, 'klnlksanc', 'knlaksnclknlkzx', '2018-12-20 12:09
 INSERT INTO `posts` VALUES (2, 'klnskdnc', 'lkmsaklmlckd ;lcdmslc \'a;s\';vvsd', '2018-12-20 12:16:27', '2018-12-20 12:16:27');
 INSERT INTO `posts` VALUES (3, 'mklmlkmkmklm', ';l;l;lmlmmkl', '2018-12-20 12:17:22', '2018-12-20 12:17:22');
 INSERT INTO `posts` VALUES (4, 'New post', 'Hy! How are you guys?', '2018-12-20 13:29:25', '2018-12-20 13:29:25');
-INSERT INTO `posts` VALUES (5, 'scs', '1lllllllllllllllllllllllllllllllllllllllllll', '2018-12-20 13:38:41', '2018-12-20 13:38:41');
+INSERT INTO `posts` VALUES (5, 'scs', '1ll', '2018-12-20 13:38:41', '2018-12-20 13:38:41');
 INSERT INTO `posts` VALUES (6, 'бд', 'бд', '2018-12-20 13:43:12', '2018-12-20 13:43:12');
 INSERT INTO `posts` VALUES (7, 'New year', 'Happy!', '2018-12-20 13:58:00', '2018-12-20 13:58:00');
 INSERT INTO `posts` VALUES (8, 'Marry Christmas!', 'What do you think about Christmas?', '2018-12-21 13:40:47', '2018-12-21 13:40:47');
@@ -239,7 +239,7 @@ CREATE TABLE `users`  (
 -- Records of users
 -- ----------------------------
 INSERT INTO `users` VALUES (1, 'George', 'george@gmail.com', '$2y$10$DR9O1Cm2ljYoe1t5H/L93eEVRFx9aA9DegARe/1QneacCz0VhxxTS', '1546518806.jpg', 2, 8, 11, 'tHPZkdpZoAlCcKXdrYni1X7lGD9kYR2aoxilFsLk9GsbWN9AvwEm7p8LQbGo', '2018-12-20 11:12:42', '2019-01-03 12:33:26', NULL, NULL);
-INSERT INTO `users` VALUES (2, 'Diana', 'diankakucheriava@gmail.com', '$2y$10$sxaI/QhR.Yzk.DZXTiTMhOg2uFvi6NzltqA4EPqc4eCT/0uGWNnb.', 'zaika.jpg', 1, 2, 5, 'ujtKaYbr2V8gO3kdrFtSLonHyY4UrQV2Qiu1zBYEiY55ZLOkltpfRlWNQqAr', '2018-12-20 13:28:42', '2018-12-25 15:18:57', NULL, NULL);
+INSERT INTO `users` VALUES (2, 'Diana', 'diana@gmail.com', '$2y$10$sxaI/QhR.Yzk.DZXTiTMhOg2uFvi6NzltqA4EPqc4eCT/0uGWNnb.', 'zaika.jpg', 1, 2, 5, 'ujtKaYbr2V8gO3kdrFtSLonHyY4UrQV2Qiu1zBYEiY55ZLOkltpfRlWNQqAr', '2018-12-20 13:28:42', '2018-12-25 15:18:57', NULL, NULL);
 INSERT INTO `users` VALUES (6, 'Sava', 'sava@gmail.com', '$2y$10$GrKCskX63DBLtR8VKYgfpeNOzHB4Z/aah/8vLtfz/8wnF1f0/GMte', 'default.jpg', 1, 2, 5, 'ToxzqN0gZil0W57m1nbSZmjb2JDzkkudx163sSVUR4TPrPMFhFt6SvnM4nf9', '2018-12-21 13:33:04', '2018-12-21 13:33:04', NULL, NULL);
 INSERT INTO `users` VALUES (7, 'george', 'georges@gmail.com', '$2y$10$ZyvAmtMWstIIoczRhjxXJu56oQ45Z6FdQ4R97C/0t50lr/FnoBhum', 'default.jpg', 1, 2, 5, 'x3CUHAE2ncmqW1FyJUqJYuq8xV3fVj0FhMy5M59LE8bgRmMtl7N48ChQgkPr', '2019-01-08 12:49:22', '2019-01-08 12:49:22', NULL, NULL);
 INSERT INTO `users` VALUES (9, 'Bob', 'bob@gmail.com', '$2y$10$QkK3pLaUU.ZunEQbKL/MI.4mto.XjeS9pxG.akMkkvgXuZY2exHcy', 'default.jpg', 1, 4, 4, 'otumkjdwCHttCaRfYzQLKQtETRmyqlcanCGpKwqPqrQOF8WviUKFES6TLC6O', '2019-01-09 08:59:32', '2019-01-09 08:59:32', NULL, NULL);
