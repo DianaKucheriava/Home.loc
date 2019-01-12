@@ -58,5 +58,7 @@
     </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src= "{{ asset('js/register.js') }}"></script>
+    <script src="{{ asset('js/email_avaliable.js') }}"></script>
 </body>
 </html>
