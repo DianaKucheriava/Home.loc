@@ -16,6 +16,8 @@ Route::get('/post/show/{id}', 'PostController@show')->name('post.show');//мар
 Route::get('/post/create', 'PostController@create')->name('post.create');
 Route::post('/post/store', 'PostController@store')->name('post.store');
 Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');
+Route::get('/index', 'PostController@indexShow')->name('index.indexShow');
+Route::get('/serach', 'SearchPostController@index')->name('search');
 /////////////////////////////Login////////////////////////////////////////////////////
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
@@ -32,3 +34,4 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
+Route::get('search', 'PostController@search');
