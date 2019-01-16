@@ -45,6 +45,8 @@
                                     {{ Auth::user()->name }} <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a class="nav-link" href="{{ route('home') }}">Додому</a></li>
+                                    <li><a href=" {{route('search')}} ">Пошук</a></li>
+                                    <li><a href="{{route('index.indexShow')}}">Коментарі</a></li>
                                     <li><a class="fa fa-btn fa-user" href="{{ route('settings') }}">Налаштування</a></li>
                                     <li><a class="nav-link" href="{{ route('logout') }}">Вихід</a></li>
                                 </ul>
