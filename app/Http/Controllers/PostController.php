@@ -5,6 +5,13 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function search(Request $request){
+	$keywords=$request->keywords;
+	$posts = DB::table('Posts')
+	->Where('title', 'like', '%' .$keywords. '%')
+	->get(); 
+        return response()->json($posts);
+    }
     public function __construct()
     {
         return $this->middleware('auth');
@@ -24,7 +31,11 @@ class PostController extends Controller
     public function index()
     {
 	$posts = Post::all();
-	return view('index', compact('posts'));
+        return redirect('posts');
+    }
+    public function indexShow(){
+        $posts = Post::all();
+        return view('index', compact('posts'));
     }
     public function show($id)
     {
