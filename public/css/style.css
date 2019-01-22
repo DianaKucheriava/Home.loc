@@ -1,0 +1,94 @@
+#search{
+	width: 300px;
+    border-radius: 21px;
+    padding: 5px;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    border-color: #dbdbdb;
+}
+.card-body{
+    margin: 22px;
+    background: #f3f5f7;
+    padding: 7px;
+}
+.card{
+    color: #080808;
+    padding: 8px;
+    margin: 1px;
+    left: 112px;
+}
+.panel {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+}
+.highlighted { color: red }
+#someFunction{
+	margin: 5px;
+	border-radius: 16px;
+	background: whitesmoke;
+}
+#someFunction:hover{
+	background: #dbe0fb;
+}
+#container{
+	position: absolute;
+}
+#avatar{
+	width: 150px;
+	height: 150px;
+	float: left;
+	border-radius: 50%;
+	margin-right: 25px;
+	position: absolute;
+	left: -146px;
+	top: 34px;
+}
+
+ .pagination {
+    margin-top: 40px;
+}
+    .full-height {
+    	height: 100vh;
+    }
+    .flex-center {
+    	align-items: center;
+    	display: flex;
+    	justify-content: center;
+    }
+    .position-ref {
+    	position: relative;
+    }
+    .top-right {
+	    position: absolute;
+	    right: 10px;
+	    top: 18px;
+	}
+    .title {
+    	 font-size: 84px;
+    }
+    .links > a {
+    	color: #636b6f;
+        padding: 0 25px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .m-b-md {
+        margin-bottom: 30px;
+    }
+    .label{
+        display: inline;
+        padding: 0.2em 0.6em 0.3em;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+        color: #101010;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: 0.25em;
+        font-family: "Raleway", sans-serif;
+    }
