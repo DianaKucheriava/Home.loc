@@ -7,13 +7,6 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-   /* public function search(Request $request){
-        $keywords=$request->keywords;
-        $posts = DB::table('Posts')
-        ->Where('title', 'like', '%' .$keywords. '%')
-        ->get(); 
-        return response()->json($posts);
-    }*/
     public function search(Request $request){
         $keywords=$request->keywords;
         $results= Post::where('title', 'LIKE', '%' . $keywords . '%')->paginate(6);
