@@ -27,7 +27,7 @@
                                 <tbody>
                                     <tr v-for="post in posts.data">
                                         <td>@{{ post.id }}</td>
-                                        <td>@{{ post.title }}</td>
+                                        <td v-if="getUser.length > 0"><p :key="post.id" v-html="highlight(post.title)"></p></td>
                                         <td>@{{ post.body }}</td>
                                         <td @click="orderRedirect(post)" style="cursor: pointer"><a>Показати більше</a></td>
                                     </tr> 
