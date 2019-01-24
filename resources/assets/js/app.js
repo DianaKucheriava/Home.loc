@@ -1,12 +1,15 @@
 import Vue from 'vue'
 import axios from 'axios'
 import VueRouter from 'vue-router'
+
 import Search from './components/Search.vue'
 
 Vue.use( VueRouter );
+
 require('./bootstrap');
 window.Vue = require('Vue');
 Vue.component('search', require('./components/Search.vue').default);
+
 window.axios = require('axios');
 
 const Pos =  { template: '<h2>{{$route.params.id}}</h2>'}
@@ -41,10 +44,11 @@ const router = new VueRouter({
 const app = new Vue({
     el: '#app',
     router: router,
+    
     data: {
         keyword: '',
-        url: 'search/searchPost', //serach
-        posts: [],// users: Array
+        url: 'search/searchPost', 
+        posts: Array
     },
     mounted() {
         this.getUser();
@@ -52,12 +56,12 @@ const app = new Vue({
     methods: {
         getUser(url) {
             axios.get(url).then(response => {
-                this.posts = response.data;
+                this.posts = response.data; 
             }).catch(error => {
                 console.log(Object.assign({}, error));
             })
         },
-        searchPost(keyword) { //searchUser(keyword)
+        searchPost(keyword) { 
             this.keyword = keyword;
             const url = `${this.url}?keyword=${this.keyword}`;
             axios.get(url).then(response => {
@@ -70,5 +74,8 @@ const app = new Vue({
             this.$router.replace('/post/show/' + post.id);
             location.reload();
         },
+        highlight(text) {
+                return text.replace(new RegExp(this.keyword, 'gi'), '<span class="highlighted">$&</span>');
+            },
     }
 });
