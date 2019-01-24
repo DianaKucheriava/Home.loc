@@ -1,53 +1,56 @@
-#search{
-	width: 300px;
-    border-radius: 21px;
-    padding: 5px;
-    position: absolute;
-    right: 25px;
-    top: 20px;
-    border-color: #dbdbdb;
-}
-.card-body{
-    margin: 22px;
-    background: #f3f5f7;
-    padding: 7px;
-}
-.card{
-    color: #080808;
-    padding: 8px;
-    margin: 1px;
-    left: 112px;
-}
-.panel {
-    font-size: 14px;
-    font-family: "Raleway", sans-serif;
-}
-.highlighted { color: red }
-#someFunction{
-	margin: 5px;
-	border-radius: 16px;
-	background: whitesmoke;
-}
-#someFunction:hover{
-	background: #dbe0fb;
-}
-#container{
-	position: absolute;
-}
-#avatar{
-	width: 150px;
-	height: 150px;
-	float: left;
-	border-radius: 50%;
-	margin-right: 25px;
-	position: absolute;
-	left: -146px;
-	top: 34px;
-}
-
- .pagination {
-    margin-top: 40px;
-}
+    #search{
+    	width: 300px;
+        border-radius: 21px;
+        padding: 5px;
+        position: absolute;
+        right: 25px;
+        top: 20px;
+        border-color: #dbdbdb;
+    }
+    .card-body{
+        margin: 22px;
+        background: #f3f5f7;
+        padding: 7px;
+    }
+    .card{
+        color: #080808;
+        padding: 8px;
+        margin: 1px;
+        left: 112px;
+    }
+    .panel{
+        font-size: 14px;
+        font-family: "Raleway", sans-serif;
+    }
+    .highlighted{
+        color:red;
+        background-color: #f4fd4f;
+    }
+    #someFunction{
+    	margin: 5px;
+    	border-radius: 16px;
+    	background: whitesmoke;
+    }
+    #someFunction:hover{
+    	background: #dbe0fb;
+    }
+    #container{
+    	position: absolute;
+    }   
+    #avatar{
+    	width: 150px;
+    	height: 150px;
+    	float: left;
+    	border-radius: 50%;
+    	margin-right: 25px;
+    	position: absolute;
+    	left: -146px;
+    	top: 34px;
+    }
+    .pagination {
+        margin-top: 40px;
+        font-size: 14px;
+    }
     .full-height {
     	height: 100vh;
     }
@@ -65,7 +68,7 @@
 	    top: 18px;
 	}
     .title {
-    	 font-size: 84px;
+    	font-size: 84px;
     }
     .links > a {
     	color: #636b6f;
