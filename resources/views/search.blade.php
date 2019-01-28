@@ -34,8 +34,8 @@
                                 </tbody>
                             </table>
                             <ul class="pagination">
-                                <li v-if="posts.prev_page_url"><a @click.prevent="getUser(posts.prev_page_url)" href="#">Попередня </a></li>
-                                <li v-if="posts.next_page_url"><a @click.prevent="getUser(posts.next_page_url)" href="#">Наступна</a></li>
+                                <li v-if="posts.prev_page_url"><a @click.prevent="getPost(posts.prev_page_url)" href="#">Попередня </a></li>
+                                <li v-if="posts.next_page_url"><a @click.prevent="getPost(posts.next_page_url)" href="#">Наступна</a></li>
                             </ul>
                         </div>
                     </div>
