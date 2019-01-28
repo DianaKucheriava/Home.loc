@@ -51,10 +51,10 @@ const app = new Vue({
         posts: Array
     },
     mounted() {
-        this.getUser(this.url);
+        this.getPost(this.url);
     },
     methods: {
-        getUser(url) {
+        getPost(url) {
             axios.get(url).then(response => {
                 this.posts = response.data; 
             }).catch(error => {
