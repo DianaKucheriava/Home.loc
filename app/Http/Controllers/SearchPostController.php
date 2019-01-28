@@ -13,11 +13,10 @@ class SearchPostController extends Controller
     	return view('search');
     }
     public function searchPost(){
-    	$keyword = request('keyword');
-    	$posts = Post::where('title', 'LIKE', '%' . $keyword . '%')->paginate(3);
+    	$posts = Post::filter()->paginate(3);
         if(request()) {
             $posts->appends(request()->all());
         }
-    	return response()->json($posts);
+        return response()->json($posts); 
     }
 }
