@@ -47,11 +47,11 @@ const app = new Vue({
     
     data: {
         keyword: '',
-        url: 'search/searchPost', 
+        url: '/search/searchPost', 
         posts: Array
     },
     mounted() {
-        this.getUser();
+        this.getUser(this.url);
     },
     methods: {
         getUser(url) {
